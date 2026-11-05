@@ -4,7 +4,7 @@ Campus Connect is a React single-page application served by Flask on Vercel and 
 
 ## Deploy to Vercel
 
-1. Import this Git repository into Vercel and keep **Root Directory** set to the repository root. Vercel builds the React app from `frontend/` and serves it through Flask.
+1. Import this Git repository into Vercel and keep **Root Directory** set to the repository root (leave it blank or use `.`; do not set it to `frontend`). The Flask entry point and `vercel.json` are at the repository root; the build command then changes into `frontend/` to install and build React.
 2. Add these environment variables to Development, Preview, and Production as needed:
    - `SUPABASE_URL`: the project URL from Supabase.
    - `SUPABASE_PUBLISHABLE_KEY`: the project's `sb_publishable_...` key. A legacy anon key can instead be set as `SUPABASE_ANON_KEY`.

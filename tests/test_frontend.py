@@ -45,7 +45,7 @@ class FrontendTests(unittest.TestCase):
 
     def test_vercel_builds_react_and_includes_dist(self):
         config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
-        self.assertIn("npm --prefix frontend run build", config["buildCommand"])
+        self.assertEqual(config["buildCommand"], "cd frontend && npm ci && npm run build")
         self.assertEqual(config["functions"]["app.py"]["includeFiles"], "frontend/dist/**/*")
 
     def test_production_build_is_served_by_flask(self):
