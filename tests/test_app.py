@@ -65,9 +65,7 @@ class EventsApiTests(unittest.TestCase):
     def test_home_serves_the_frontend(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"Campus Connect", response.data)
-        self.assertIn(b"/assets/event-api.js", response.data)
-        self.assertIn(b"/assets/explore-events.js", response.data)
+        self.assertIn(b'<div id="root">', response.data)
         response.close()
 
     def test_all_frontend_routes_and_assets_are_available(self):
@@ -75,11 +73,6 @@ class EventsApiTests(unittest.TestCase):
             "/event-details",
             "/my-registrations",
             "/organizer-attendees",
-            "/assets/event-api.js",
-            "/assets/explore-events.js",
-            "/assets/event-details.js",
-            "/assets/my-registrations.js",
-            "/assets/organizer-attendees.js",
         )
         for path in paths:
             with self.subTest(path=path):

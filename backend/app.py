@@ -4,33 +4,15 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file, send_from_directory
 from supabase import create_client
 
 load_dotenv()
 
 app = Flask(__name__)
-FRONTEND_ROOT = (
-    Path(__file__).resolve().parent.parent
-    / "frontend"
-    / "stitch_campus_connect_frontend"
-)
-FRONTEND_PAGES = {
-    "explore": FRONTEND_ROOT / "explore_campus_events" / "code.html",
-    "details": FRONTEND_ROOT / "event_details_registration" / "code.html",
-    "registrations": FRONTEND_ROOT / "my_registered_events" / "code.html",
-    "attendees": FRONTEND_ROOT / "organizer_attendee_management" / "code.html",
-}
-FRONTEND_ASSETS = {
-    name: Path(__file__).resolve().parent.parent / "frontend" / name
-    for name in (
-        "event-api.js",
-        "explore-events.js",
-        "event-details.js",
-        "my-registrations.js",
-        "organizer-attendees.js",
-    )
-}
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+FRONTEND_BUILD = PROJECT_ROOT / "frontend" / "dist"
+FRONTEND_ASSETS = FRONTEND_BUILD / "assets"
 
 EVENTS_TABLE = "events"
 REGISTRATIONS_TABLE = "registrations"
@@ -138,43 +120,46 @@ def database_error(error):
     return jsonify({"error": "Database request failed"}), 502
 
 
+def serve_react_app():
+    index_file = FRONTEND_BUILD / "index.html"
+    if not index_file.is_file():
+        return jsonify({"error": "React frontend is not built", "hint": "Run npm --prefix frontend run build."}), 503
+    return send_file(index_file)
+
+
 @app.get("/")
 def index():
-    if FRONTEND_PAGES["explore"].is_file():
-        return send_file(FRONTEND_PAGES["explore"])
-    return jsonify({
-        "service": "events-api",
-        "endpoints": [
-            "GET /api/events",
-            "GET /api/events/<id>",
-            "POST /api/registrations",
-            "GET /api/me/registrations",
-            "GET /api/events/<id>/registrations",
-        ],
-    })
+    return serve_react_app()
 
 
 @app.get("/event-details")
 def event_details_page():
-    return send_file(FRONTEND_PAGES["details"])
+    return serve_react_app()
 
 
 @app.get("/my-registrations")
 def my_registrations_page():
-    return send_file(FRONTEND_PAGES["registrations"])
+    return serve_react_app()
 
 
 @app.get("/organizer-attendees")
 def organizer_attendees_page():
-    return send_file(FRONTEND_PAGES["attendees"])
+    return serve_react_app()
 
 
-@app.get("/assets/<asset_name>")
+@app.get("/assets/<path:asset_name>")
 def frontend_asset(asset_name):
-    asset = FRONTEND_ASSETS.get(asset_name)
-    if asset is None or not asset.is_file():
+    asset = FRONTEND_ASSETS / asset_name
+    if not asset.is_file():
         return jsonify({"error": "Asset not found"}), 404
-    return send_file(asset, mimetype="application/javascript")
+    return send_from_directory(FRONTEND_ASSETS, asset_name)
+
+
+@app.get("/<path:frontend_path>")
+def frontend_route(frontend_path):
+    if frontend_path.startswith("api/") or frontend_path.startswith("assets/"):
+        return jsonify({"error": "Not found"}), 404
+    return serve_react_app()
 
 
 @app.get("/api/config")
