@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#ffdad6","surface-container-highest":"#e0e3e5","on-primary":"#ffffff","secondary-fixed":"#ffdbca","surface-container-low":"#f2f4f6","on-primary-container":"#dad7ff","on-secondary-fixed":"#341100","on-secondary":"#ffffff","primary-fixed":"#e2dfff","outline":"#777587","on-tertiary-container":"#d4dbf5","on-surface-variant":"#464555","surface-tint":"#4d44e3","secondary-container":"#fd761a","primary-fixed-dim":"#c3c0ff","error":"#ba1a1a","inverse-surface":"#2d3133","inverse-primary":"#c3c0ff","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#783200","tertiary":"#41485e","secondary-fixed-dim":"#ffb690","on-background":"#191c1e","surface-container":"#eceef0","surface-bright":"#f7f9fb","on-surface":"#191c1e","on-error-container":"#93000a","on-secondary-container":"#5c2400","surface":"#f7f9fb","primary-container":"#4f46e5","on-primary-fixed-variant":"#3323cc","surface-variant":"#e0e3e5","on-tertiary-fixed-variant":"#3f465c","on-tertiary":"#ffffff","on-tertiary-fixed":"#131b2e","tertiary-container":"#586076","primary":"#3525cd","outline-variant":"#c7c4d8","surface-dim":"#d8dadc","secondary":"#9d4300","tertiary-fixed":"#dae2fd","on-primary-fixed":"#0f0069","tertiary-fixed-dim":"#bec6e0","background":"#f7f9fb","inverse-on-surface":"#eff1f3","on-error":"#ffffff","surface-container-high":"#e6e8ea"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-xl":"2.5rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem"},"fontFamily":{"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Inter"],"display-hero":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["Inter"],"label-caps":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-hero-mobile":["Plus Jakarta Sans"]},"fontSize":{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}};</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="explore-events" href="/"><img alt="Campus Connect Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5KVRTnQfgkZfXM2OdWVcHCBeOd-kEBtzRoTyAjNZtKsu4x3KDFx1rG2-WM_rUFy0pWDG_KpUDHKtteMMC81q6ifIsaq3SotEQWm8Y4fD5UPNIMQFEZiuBONJVQZ9fj2AV9QotaFXjiGkE-QaffgTg31qSoGICkONvh9aqERZAAx1zDToGjfhiGV2WzqAumHpGRpSNt6ilSOv4bQIp5oZKS0LeoYH2h7zDC5af0yRZNw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Campus Connect</span></a><div class="relative hidden lg:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary placeholder:text-on-surface-variant transition-all" placeholder="Search campus events, venues..." type="search"/></div></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary"><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="explore-events" href="/">Explore Events</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="my-registrations" href="/my-registrations">My Registrations</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="organizer-portal" href="/organizer-attendees">Organizer Portal</a></nav><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Authenticated Student:</span><span class="font-label-sm text-label-sm text-on-surface">Maya Patel</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><button class="flex items-center gap-space-xs p-1 rounded-full hover:bg-surface-container-high transition-colors group" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpuvSjmVQOb-QImY36orcvwetKChvJ414O16vdRYNF7-awjEzWOvm8PyPCsoLLSZmTQYzGfiQMIqL25OHqxYOiF99towzPYbtSSAI4abRWL2Qcs1p8Nmw22if6wimv8hZ7f4Yr5A025oG8GKE7kzvtK7dwslZHSB0655-0McR_xAHuYV3qdA29CuaXy06F1D9IOGGsBN4nEXUEeUY6nw58wBCKb60ZkQUN6d6Ht5Qm"/><span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface text-[18px]">expand_more</span></button></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-140px)]"><div class="max-w-[1280px] mx-auto px-margin pt-space-md"><nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm pb-space-md"><a class="hover:text-primary transition-colors" data-path="explore-events" href="/">Home</a><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-label-md text-label-md">Campus Life</span></nav><div class="flex flex-col w-full pb-space-xl">
+<!-- Interactive API Mock Controller & Feedback Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-md p-space-md rounded-xl shadow-2xl bg-inverse-surface text-inverse-on-surface max-w-md" id="registration-toast">
+<div class="w-10 h-10 rounded-full flex items-center justify-center bg-primary-container text-on-primary" id="toast-icon-wrapper">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">check_circle</span>
+</div>
+<div class="flex-1 pr-space-sm">
+<div class="font-headline-sm text-label-md text-inverse-on-surface" id="toast-title">Registration Submitted</div>
+<div class="font-body-sm text-body-sm text-outline-variant mt-0.5" id="toast-message">HTTP 201: Successfully reserved ticket. Confirmation sent to campus email.</div>
+</div>
+<button class="p-1 rounded-lg text-outline-variant hover:text-inverse-on-surface" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Event Header Banner Section -->
+<section class="relative rounded-2xl overflow-hidden bg-surface-container-lowest shadow-md mb-space-xl">
+<!-- Visual Cover Artwork -->
+<div class="relative w-full h-[340px] md:h-[420px] bg-cover bg-center" data-alt="High energy university hackathon atmosphere with dynamic indigo and neon ambient lighting, undergraduate students working collaboratively around laptop stations, modern glass campus innovation center with greenery and digital AI sustainability visualizations, architectural collegiate aesthetics in high contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHC6lAw1emzJb9pVCNunj18CFeKSaCx1rIdknNZB_43z8yoUe46eoRJIy2fRVzza5Iarc6kYfaAOAYPf12l-fcISs23aD15YkQVC_ueYpBxNtpxAZiZqZkqT6h0PLCEmhpymRIl2l10ncEOJHLWRWQ4vmEt5XcHq4wFg4LP0G3QjGvFlinlDDz5oiLNmir4w2lFYPwaJvCxk-4jQYZ5xLVuPL-E3tXApjdlIFfOQ02')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/60 to-transparent"></div>
+<!-- Top Meta Badges Overlay -->
+<div class="absolute top-space-md left-space-md right-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Flagship Event
+          </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase">
+            Tech & Innovation
+          </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps uppercase">
+            Free Admission
+          </span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">restaurant</span> Meals Provided
+          </span>
+</div>
+<!-- Live Capacity Quick-Badge -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-ping"></span>
+<span>118 / 150 Seats Claimed</span>
+</div>
+</div>
+<!-- Banner Bottom Content Anchor -->
+<div class="absolute bottom-0 inset-x-0 p-space-lg md:p-space-xl text-inverse-on-surface flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="max-w-3xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-headline-sm text-label-sm font-bold">
+              ACM
+            </div>
+<span class="font-label-md text-label-md text-surface-container-high">Hosted by ACM Student Chapter • UCLA Engineering Council</span>
+</div>
+<h1 class="font-display-hero text-headline-lg md:text-display-hero text-inverse-on-surface font-extrabold tracking-tight leading-none mb-space-md">
+            Annual HackCampus 2026: AI & Sustainability
+          </h1>
+<p class="font-body-md text-body-md text-outline-variant max-w-2xl">
+            A 36-hour sprint uniting computer scientists, urban ecologists, and clean-tech enthusiasts to engineer deployable autonomous systems for university resource reduction.
+          </p>
+</div>
+<!-- Fast Metric / Live Share Capsule -->
+<div class="flex items-center gap-space-xs">
+<button aria-label="Save to Calendar" class="px-4 py-2.5 rounded-lg bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 backdrop-blur-md text-inverse-on-surface font-label-md text-label-md flex items-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_add_on</span> Add to Calendar
+          </button>
+<button aria-label="Share Event" class="p-2.5 rounded-lg bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 backdrop-blur-md text-inverse-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Logistics Quick-Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-6 p-space-lg bg-surface-container-lowest border-t-0">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Date & Schedule</div>
+<div class="font-label-md text-label-md text-on-surface">Oct 18 - 20, 2026</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Friday 5:00 PM - Sunday 12:00 PM</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">pin_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Campus Location</div>
+<div class="font-label-md text-label-md text-on-surface truncate">Ackerman Grand Ballroom</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Floor 2 • Westwood Campus</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Eligibility</div>
+<div class="font-label-md text-label-md text-on-surface">UCLA Students & Faculty</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Active UID Required</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">api</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">System Routing</div>
+<div class="font-label-md text-label-md text-on-surface font-mono">GET /api/events/ev_8029</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Live API Sync: Active</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Split Layout (Left: 2/3 Content, Right: 1/3 Registration) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT 8 COLUMNS: Detailed Event Information -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- Realtime Capacity Progress Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<!-- Mini Donut Indicator (SVG inline) -->
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="78.6, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-label-md text-on-surface font-bold">79%</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Registration Capacity</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">118 / 150 Registered Attendees</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">32 spots remain for general registration before waitlist activates.</div>
+</div>
+</div>
+<div class="w-full sm:w-48 bg-surface-container rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 78.6%"></div>
+</div>
+</div>
+<!-- Keynote Speakers Grid -->
+<section>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-md text-on-surface font-bold">Keynote Speakers & Mentors</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">3 Featured Mentors</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Speaker 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Dr. Elena Rostova, female computer science professor with glasses in an academic research laboratory with digital monitors showcasing neural network graphs, crisp lighting and collegiate tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmtTThS72DaCcKXIQOoEtgSB7Bj5TW-Ijxs_BnvkxKmBlyJAlsDM_vLoJrVBatdlE7wAMucYESwKBrhQIWukpFhxG1oFfP42tbglCWdsJ5k21j6QYbr_M2bqB1FaeQw-sMEa-5VR8YHgIMNO9Ly7pCwrljssFm7_DiH0SXMCXEV2zOsAM21UEmrRLOkV4iWmvGPEyhX2xrs2y74RrwqiYseavTafR5Nu3ShoXSkYLZ"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-caps text-[10px] uppercase">
+                  Keynote
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dr. Elena Rostova</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Associate Professor, UCLA AI Institute</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">Leading national research on low-parameter edge inference models for grid conservation.</p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Green Computing</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">LLMs</span>
+</div>
+</div>
+<!-- Speaker 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Portrait of Marcus Vance, senior clean-tech startup founder wearing minimalist tech casual blazer against an engineering lab background with solar and robotics prototypes, warm directional studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5y4I6mYvUNkMgrYmIflc3hUnobQuoH1GQ68FZoHvj5ZdvuOeShNPPa_z4FYNDK7NaQD73FL_xSy7vn3F7pDwK7Ko5DdPB8EtKNbsJZC6vDw-rCYo67uJY8PEBoR1JvuCd2tgWKPHMm69afsp6y7ALU6QuuZTIqRtKcqntG2SMRGlLvSAUhf7CNfkp3IQ7yPiegkVVnnZQBCeQ-n-MkUtWIouYX0VHlkWuQvFHGYW"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-caps text-[10px] uppercase">
+                  Industry Lead
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Marcus Vance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">VP of Engineering, Verdant Core</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">Ex-Tesla autonomic battery firmware architect; UCLA Samueli Alum '19.</p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Hardware</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Energy</span>
+</div>
+</div>
+<!-- Speaker 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Priya Sundaram, female data ethics researcher and software lead in modern open collaborative innovation hub, thoughtful expression with warm studio rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYrXWjxyLn3hW2K0k7eBXi2l4nrGcVegF0T7nh976mwBcwAPS7uEHc7HcKlIbLBS7SHGonuz5AmcSoSmZZ_4uvk93WQoZRBccyn5bVa6m9wfxyD3gZ44IbzVQBPtiKc8crkckqEFQYSC6MT60Af88qWzK_fC-y8AzXt6I_drR3vyldjYpaPVaSvGEhX7LYi-mAVWEwMOG43WiF0zGX8zJJWy02OvHkJrNHlkc_fsNg"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-caps text-[10px] uppercase">
+                  Judge & Mentor
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Priya Sundaram</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Staff Data Scientist, OpenClimate Earth</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">Evaluating algorithmic fairness and satellite telemetry for environmental accountability.</p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Satellite GIS</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Policy</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive Schedule Timeline -->
+<section>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-md text-on-surface font-bold">Event Schedule & Milestones</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">All times Pacific Time (PT)</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<!-- Day Tabs -->
+<div class="flex items-center gap-space-xs mb-space-lg bg-surface-container-low p-1 rounded-lg w-fit">
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm transition-colors" id="tab-btn-day1" onclick="switchTab('day1')">
+              Day 1: Oct 18 (Fri)
+            </button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" id="tab-btn-day2" onclick="switchTab('day2')">
+              Day 2: Oct 19 (Sat)
+            </button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" id="tab-btn-day3" onclick="switchTab('day3')">
+              Day 3: Oct 20 (Sun)
+            </button>
+</div>
+<!-- Day 1 Schedule List -->
+<div class="relative pl-6 space-y-space-lg before:content-[''] before:absolute before:top-2 before:bottom-2 before:left-[11px] before:w-[2px] before:bg-surface-container-highest" id="day-schedule-content">
+<div class="relative pl-space-md group">
+<span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<span class="font-label-md text-label-md text-primary font-bold">5:00 PM – 6:30 PM</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Ackerman Foyer</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Check-in, Swag Distribution & Hardware Kit Checkout</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Present your Campus Connect student pass QR code at the desk to receive hackathon credentials and IoT microcontroller kits.</p>
+</div>
+<div class="relative pl-space-md group">
+<span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">6:30 PM – 7:30 PM</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Grand Ballroom Stage</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Opening Ceremony & Track Reveal: AI for Campus Carbon Auditing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Keynote remarks from Dr. Elena Rostova and official problem statement briefing with university facility data leads.</p>
+</div>
+<div class="relative pl-space-md group">
+<span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-secondary-container ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<span class="font-label-md text-label-md text-secondary-container font-bold">7:30 PM – 8:30 PM</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary-container">Dining Terrace</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Catered Dinner & Team Formation Mixer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Special dietary accommodations honored. Facilitated speed-pitching for solo applicants seeking collaborators.</p>
+</div>
+<div class="relative pl-space-md group">
+<span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">9:00 PM Sharp</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Main Arena</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Hacking Commences • Git Repositories Unlocked</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mentors circulate Ackerman Hall through 2:00 AM. Snack bars active through midnight.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Venue Map & Logistics -->
+<section>
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="w-1.5 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-md text-on-surface font-bold">Venue & Campus Access</h2>
+</div>
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm p-space-md">
+<!-- Google Maps Static Pipeline Container -->
+<div class="w-full h-64 bg-cover bg-center rounded-lg relative flex items-end p-space-md" data-location="Ackerman Union, UCLA, Los Angeles, CA 90095" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-zBL_laaMBYTIzmAtVbU5Aq4YGhDFa-yp77W3qlhnaQZhGGTGO01ncR92jRcsJq_WCCgODCRe9jOxhT-uJU2mF5d3HU-zHd6nrIFteN-o-EGn9U9goULJiqNyJir-8MBPCKkiyujUMt2bnzMm8VdEPO08GrXnjnvbTzP4HukeW-LeQ9Hbar1O6Tf-eoTpWa5AtV2IJwEQfkdwOVFiFBzzX12bgn84ZV5m7qZvq_Az')">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md p-space-md rounded-lg shadow-md max-w-sm">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md font-bold mb-1">
+<span class="material-symbols-outlined text-[18px]">navigation</span> Ackerman Grand Ballroom
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">308 Westwood Plaza, 2nd Floor. Direct interior escalator from Bruin Walk walkway.</p>
+</div>
+</div>
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">wifi</span>
+<span>Eduroam & UCLA_WEB high-density Wi-Fi nodes activated for all registered MAC addresses.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">local_parking</span>
+<span>Complimentary overnight parking permits for Parking Structure 4 (obtain voucher at check-in).</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">accessible</span>
+<span>Fully ADA compliant facility with step-free elevators and dedicated quiet resting suites on Level 3.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Prerequisites, Rules & FAQ -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Prerequisites & What to Bring -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">checklist</span> Preparation & Essentials
+            </h3>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Valid Physical BruinCard or verified Digital UID on Campus Connect app.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Personal development laptop, chargers, and surge-protected power hub.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Pre-installed Git client and Docker/Node/Python environments.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Reusable water container for zero-waste hydration stations.</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant">
+<strong>Hackathon Honor Code:</strong> All code repositories must be initiated fresh upon the official start signal. Pre-built templates are disqualified.
+          </div>
+</div>
+<!-- FAQs Accordion -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">help_center</span> Frequently Asked
+          </h3>
+<div class="space-y-space-sm">
+<details class="group rounded-lg bg-surface-container-low p-space-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span>Can I register as an individual?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t-0">
+                Yes! Hundreds of students join solo. We host structured mixer events during Friday dinner to pair participants by interest and skillset (teams 2-4 hackers).
+              </p>
+</details>
+<details class="group rounded-lg bg-surface-container-low p-space-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span>Are non-STEM majors eligible?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t-0">
+                Absolutely. Successful teams require policy analysts, environmental planners, and UX product designers alongside back-end engineers.
+              </p>
+</details>
+<details class="group rounded-lg bg-surface-container-low p-space-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span>What prizes are awarded?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2 border-t-0">
+                $12,000 total prize purse across 3 tracks: Campus Efficiency, Smart Grids, and Open Sustainability Data, plus fast-track venture grants.
+              </p>
+</details>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT 4 COLUMNS: Sticky Interactive Registration Card -->
+<div class="lg:col-span-4 sticky top-24 space-y-space-md">
+<!-- Primary Registration Module -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg">
+<!-- Registration Meta Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps uppercase font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> Open Enrollment
+          </span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-mono">POST /api/registrations</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Claim Event Pass</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Complete registration to reserve your pass for HackCampus 2026.</p>
+<!-- Current Authentication Pill -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<img alt="Maya Patel" class="w-10 h-10 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpuvSjmVQOb-QImY36orcvwetKChvJ414O16vdRYNF7-awjEzWOvm8PyPCsoLLSZmTQYzGfiQMIqL25OHqxYOiF99towzPYbtSSAI4abRWL2Qcs1p8Nmw22if6wimv8hZ7f4Yr5A025oG8GKE7kzvtK7dwslZHSB0655-0McR_xAHuYV3qdA29CuaXy06F1D9IOGGsBN4nEXUEeUY6nw58wBCKb60ZkQUN6d6Ht5Qm"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Maya Patel</span>
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant truncate">UID: 804-921-140 • Computer Science B.S.</div>
+</div>
+</div>
+<!-- Registration Form -->
+<form class="mt-space-md space-y-space-md" id="registration-form" onsubmit="handleRegistration(event)">
+<!-- Ticket Type Selector -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-space-xs">Select Ticket Type</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<label class="ticket-opt flex flex-col p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed">
+<input checked="" class="sr-only" name="ticket_type" type="radio" value="team_hacker"/>
+<span class="font-label-md text-label-md font-bold">Team Hacker</span>
+<span class="font-label-caps text-label-caps opacity-75 mt-0.5">36h Access + Kit</span>
+</label>
+<label class="ticket-opt flex flex-col p-space-sm rounded-xl bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed">
+<input class="sr-only" name="ticket_type" type="radio" value="general_attendee"/>
+<span class="font-label-md text-label-md font-bold">General Visitor</span>
+<span class="font-label-caps text-label-caps opacity-75 mt-0.5">Keynotes & Expo</span>
+</label>
+</div>
+</div>
+<!-- Academic Major Input -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1" for="major-input">Academic Department / Major</label>
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-inner outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all" id="major-input" placeholder="e.g. Mechanical Engineering" required="" type="text" value="Computer Science & Engineering"/>
+</div>
+<!-- Graduation Year Selector -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1" for="grad-year">Graduation Cohort</label>
+<select class="w-full h-11 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-inner outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all" id="grad-year">
+<option selected="" value="2026">Class of 2026 (Senior)</option>
+<option value="2027">Class of 2027 (Junior)</option>
+<option value="2028">Class of 2028 (Sophomore)</option>
+<option value="2029">Class of 2029 (Freshman)</option>
+<option value="grad">Graduate / Post-Baccalaureate</option>
+</select>
+</div>
+<!-- Dietary Restrictions -->
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1" for="diet-input">Catering & Dietary Requirements</label>
+<select class="w-full h-11 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-inner outline-none ring-1 ring-outline-variant focus:ring-2 focus:ring-primary transition-all" id="diet-input">
+<option value="none">Standard Meal Plan (No Restrictions)</option>
+<option selected="" value="vegetarian">Vegetarian</option>
+<option value="vegan">Vegan</option>
+<option value="halal">Halal Certified</option>
+<option value="kosher">Kosher</option>
+<option value="gluten-free">Gluten-Free</option>
+</select>
+</div>
+<!-- Hardware Kit Add-on Checkbox -->
+<div class="pt-1">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary bg-surface-container-low" id="kit-checkbox" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Reserve ESP32 IoT Sensor Kit (Free loaner)</span>
+</label>
+</div>
+<!-- Primary CTA Button -->
+<div class="pt-space-xs">
+<button class="w-full py-3.5 px-space-md rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all active:translate-y-0.5" id="submit-btn" type="submit">
+<span class="material-symbols-outlined text-[20px]" id="btn-icon">how_to_reg</span>
+<span id="btn-text">Confirm & Register Ticket</span>
+</button>
+</div>
+</form>
+<!-- Simulated API Endpoint Status Panel -->
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-low rounded-xl p-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps uppercase mb-1">
+<span>Client API Simulator</span>
+<span class="text-primary font-mono font-bold">201 / 409 Testbed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Toggle API response test scenario to evaluate server handshake behavior:
+          </p>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-1.5 px-space-xs rounded bg-surface-container-lowest text-primary font-label-caps text-label-caps uppercase font-bold shadow-sm transition-all" id="mode-success-btn" onclick="setApiMode('success')" type="button">
+              201 Created
+            </button>
+<button class="py-1.5 px-space-xs rounded text-on-surface-variant font-label-caps text-label-caps uppercase hover:bg-surface-container-lowest transition-all" id="mode-conflict-btn" onclick="setApiMode('conflict')" type="button">
+              409 Conflict
+            </button>
+</div>
+</div>
+<!-- Student Union Guarantee Footnote -->
+<div class="mt-space-md flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Verified Student Union Entry • No Ticket Transfer Fee</span>
+</div>
+</div>
+<!-- Quick Organizer Contact Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Questions for Organizer?</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">acm@engineering.ucla.edu</div>
+</div>
+<a aria-label="Email Organizer" class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary transition-colors" href="mailto:acm@engineering.ucla.edu">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simulated State for API Handshake
+  let currentApiMode = 'success'; // 'success' (201) or 'conflict' (409)
+  let toastTimer = null;
+
+  function setApiMode(mode) {
+    currentApiMode = mode;
+    const successBtn = document.getElementById('mode-success-btn');
+    const conflictBtn = document.getElementById('mode-conflict-btn');
+
+    if (mode === 'success') {
+      successBtn.className = 'py-1.5 px-space-xs rounded bg-surface-container-lowest text-primary font-label-caps text-label-caps uppercase font-bold shadow-sm transition-all';
+      conflictBtn.className = 'py-1.5 px-space-xs rounded text-on-surface-variant font-label-caps text-label-caps uppercase hover:bg-surface-container-lowest transition-all';
+    } else {
+      conflictBtn.className = 'py-1.5 px-space-xs rounded bg-surface-container-lowest text-error font-label-caps text-label-caps uppercase font-bold shadow-sm transition-all';
+      successBtn.className = 'py-1.5 px-space-xs rounded text-on-surface-variant font-label-caps text-label-caps uppercase hover:bg-surface-container-lowest transition-all';
+    }
+  }
+
+  function handleRegistration(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+
+    // Show loading state
+    btnText.textContent = 'Transmitting POST /api/registrations...';
+    btnIcon.textContent = 'sync';
+    btnIcon.classList.add('animate-spin');
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      // Revert loading state
+      btnIcon.classList.remove('animate-spin');
+      btnIcon.textContent = 'how_to_reg';
+      btnText.textContent = 'Confirm & Register Ticket';
+      submitBtn.disabled = false;
+
+      // Handle Simulated HTTP Responses
+      if (currentApiMode === 'success') {
+        showToast(
+          'HTTP 201 Created • UID Confirmed',
+          'Maya Patel registered for Team Hacker Pass. Barcode generated in "My Registrations".',
+          false
+        );
+      } else {
+        showToast(
+          'HTTP 409 Conflict: Already Registered',
+          'A valid registration (Pass #HK-8049) is already attached to Student UID 804921.',
+          true
+        );
+      }
+    }, 700);
+  }
+
+  function showToast(title, msg, isError) {
+    const toast = document.getElementById('registration-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIconWrap = document.getElementById('toast-icon-wrapper');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toastTitle.innerHTML = title;
+    toastMsg.innerHTML = msg;
+
+    if (isError) {
+      toastIconWrap.className = 'w-10 h-10 rounded-full flex items-center justify-center bg-error-container text-on-error-container';
+      toastIcon.textContent = 'error';
+    } else {
+      toastIconWrap.className = 'w-10 h-10 rounded-full flex items-center justify-center bg-primary-container text-on-primary';
+      toastIcon.textContent = 'verified';
+    }
+
+    toast.classList.remove('translate-y-28', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      dismissToast();
+    }, 5500);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('registration-toast');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-28', 'opacity-0', 'pointer-events-none');
+  }
+
+  function switchTab(dayId) {
+    const content = document.getElementById('day-schedule-content');
+    const btnDay1 = document.getElementById('tab-btn-day1');
+    const btnDay2 = document.getElementById('tab-btn-day2');
+    const btnDay3 = document.getElementById('tab-btn-day3');
+
+    // Reset styles
+    [btnDay1, btnDay2, btnDay3].forEach(b => {
+      b.className = 'px-space-md py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors';
+    });
+
+    const activeClass = 'px-space-md py-1.5 rounded font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm transition-colors';
+
+    if (dayId === 'day1') {
+      btnDay1.className = activeClass;
+      content.innerHTML = `
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-primary font-bold">5:00 PM – 6:30 PM</span>
+            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Ackerman Foyer</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Check-in, Swag Distribution & Hardware Kit Checkout</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Present your Campus Connect student pass QR code at the desk to receive credentials and sensor kits.</p>
+        </div>
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-on-surface font-bold">6:30 PM – 7:30 PM</span>
+            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Grand Ballroom Stage</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Opening Ceremony & Keynote by Dr. Elena Rostova</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Problem statement reveals and campus environmental infrastructure telemetry briefing.</p>
+        </div>
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-secondary-container ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-secondary-container font-bold">7:30 PM – 8:30 PM</span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary-container">Dining Terrace</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Catered Dinner & Team Formation Mixer</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Special dietary accommodations honored. Facilitated team matching for solo hackers.</p>
+        </div>`;
+    } else if (dayId === 'day2') {
+      btnDay2.className = activeClass;
+      content.innerHTML = `
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-primary font-bold">9:00 AM – 10:00 AM</span>
+            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Ballroom Main</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Breakfast & Architecture Check-In</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Coffee bar, acai bowls, and 1-on-1 architecture feedback sessions with Marcus Vance.</p>
+        </div>
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-on-surface font-bold">2:00 PM – 3:30 PM</span>
+            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Workshop Room B</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Special Workshop: PyTorch Edge Models on Tiny Devices</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hands-on micro-optimization workshop for energy-constrained battery sensors.</p>
+        </div>
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-secondary-container ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-secondary-container font-bold">11:00 PM</span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary-container">Terrace Lounge</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Late Night Boba Social & Mario Kart Tournament</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Recharge zone hosted by ACM Board members.</p>
+        </div>`;
+    } else {
+      btnDay3.className = activeClass;
+      content.innerHTML = `
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-primary font-bold">9:00 AM Sharp</span>
+            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Devpost Portal</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Code Freeze & Submission Deadline</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Final GitHub commits pushed and 2-minute demo videos registered.</p>
+        </div>
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-on-surface font-bold">10:00 AM – 11:30 AM</span>
+            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Grand Ballroom Arena</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Science Fair Expo & Live Judging Rounds</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Open public campus walk-through with industry judging panels.</p>
+        </div>
+        <div class="relative pl-space-md group">
+          <span class="absolute -left-[19px] top-1.5 w-3.5 h-3.5 rounded-full bg-secondary-container ring-4 ring-surface-container-lowest"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-label-md text-label-md text-secondary-container font-bold">11:30 AM – 12:30 PM</span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary-container">Auditorium</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Awards Ceremony & $12,000 Grand Prize Grant Announcements</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Closing remarks by engineering dean and presentation of winners.</p>
+        </div>`;
+    }
+  }
+</script></div></main><footer class="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Campus Connect Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5KVRTnQfgkZfXM2OdWVcHCBeOd-kEBtzRoTyAjNZtKsu4x3KDFx1rG2-WM_rUFy0pWDG_KpUDHKtteMMC81q6ifIsaq3SotEQWm8Y4fD5UPNIMQFEZiuBONJVQZ9fj2AV9QotaFXjiGkE-QaffgTg31qSoGICkONvh9aqERZAAx1zDToGjfhiGV2WzqAumHpGRpSNt6ilSOv4bQIp5oZKS0LeoYH2h7zDC5af0yRZNw"/><span class="font-label-md text-label-md text-on-surface">Campus Connect Portal</span><span class="font-body-sm text-body-sm text-on-surface-variant">• Official Student Union Event Network</span></div><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Campus Guidelines</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">API Integration</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Student Union Support</a></div></div><div class="mt-space-lg pt-space-md text-center md:text-left font-body-sm text-body-sm text-on-surface-variant">© 2025 Campus Connect. High-trust collegiate event management infrastructure.</div></div></footer><script src="/assets/event-api.js"></script><script src="/assets/event-details.js"></script></body></html>

@@ -1,0 +1,11 @@
+.env
+.env.*
+backend/.env
+backend/venv/
+backend/.venv/
+**/__pycache__/
+**/*.py[cod]
+tests/
+frontend/screen.png
+frontend/DESIGN.md
+config/

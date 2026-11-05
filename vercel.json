@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "app.py": {
+      "includeFiles": [
+        "backend/app.py",
+        "backend/__init__.py",
+        "frontend/stitch_campus_connect_frontend/**/*.html",
+        "frontend/*.js"
+      ]
+    }
+  }
+}
