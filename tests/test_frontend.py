@@ -2,10 +2,12 @@ import re
 import json
 import shutil
 import subprocess
-import tomllib
 import unittest
 from pathlib import Path
 
+from flask import Flask
+
+from app import app as vercel_app
 
 ROOT = Path(__file__).resolve().parents[1]
 FRONTEND = ROOT / "frontend"
@@ -27,11 +29,19 @@ SCRIPTS = (
 class FrontendTests(unittest.TestCase):
     def test_vercel_function_includes_frontend_with_a_glob_string(self):
         config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
-        include_files = config["functions"]["backend/app.py"]["includeFiles"]
+        include_files = config["functions"]["app.py"]["includeFiles"]
         self.assertIsInstance(include_files, str)
         self.assertEqual(include_files, "frontend/**/*")
-        project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
-        self.assertEqual(project["tool"]["vercel"]["entrypoint"], "backend.app:app")
+
+    def test_vercel_entrypoint_is_a_flask_app_with_backend_routes(self):
+        self.assertIsInstance(vercel_app, Flask)
+        with vercel_app.test_client() as client:
+            home = client.get("/")
+            asset = client.get("/assets/event-api.js")
+            self.assertEqual(home.status_code, 200)
+            self.assertEqual(asset.status_code, 200)
+            home.close()
+            asset.close()
 
     def test_pages_load_shared_api_client_and_page_scripts(self):
         for page in PAGES:
