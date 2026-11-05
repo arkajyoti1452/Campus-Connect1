@@ -12,6 +12,10 @@
   let currentCategory = 'all';
   let loadError = null;
 
+  function eventId(event) {
+    return event.id ?? event.event_id;
+  }
+
   function eventTitle(event) {
     return event.title || event.name || event.event_name || `Event ${event.id}`;
   }
@@ -21,7 +25,7 @@
   }
 
   function dateValue(event) {
-    return event.start_date || event.starts_at || event.start_time || event.event_date || event.date || '';
+    return event.start_date || event.starts_at || event.start_time || event.event_date || event.date || event.timestamp || '';
   }
 
   function formatDate(value) {
@@ -82,7 +86,7 @@
 
     const link = document.createElement('a');
     link.className = 'w-full bg-primary hover:bg-primary-container text-on-primary py-2 rounded-lg font-label-md text-label-md transition-colors text-center shadow-xs';
-    link.href = `/event-details?id=${encodeURIComponent(event.id)}`;
+    link.href = `/event-details?id=${encodeURIComponent(eventId(event))}`;
     link.textContent = 'View details & register';
     body.append(details, link);
     card.append(banner, body);
@@ -164,7 +168,7 @@
     try {
       const response = await EventHubApi.request('/api/events');
       if (!Array.isArray(response)) throw new Error('The events API returned an unexpected response.');
-      events = response.filter(event => event && event.id !== undefined && event.id !== null);
+      events = response.filter(event => event && eventId(event) !== undefined && eventId(event) !== null);
       if (eventsEndpointBadge) eventsEndpointBadge.setAttribute('title', `Connected: ${EventHubApi.apiUrl('/api/events')}`);
     } catch (error) {
       loadError = error.message;

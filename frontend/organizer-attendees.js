@@ -74,7 +74,7 @@
         value(item, 'full_name'),
         value(item, 'email'),
         item.ticket_tier || 'standard',
-        item.created_at || item.registered_at || '—'
+        item.created_at || item.createdAt || item.registered_at || '—'
       ];
       cells.forEach((text, index) => {
         const cell = document.createElement('td');
@@ -92,10 +92,10 @@
       const events = await EventHubApi.request('/api/events');
       if (!Array.isArray(events)) throw new Error('The events API returned an unexpected response.');
       eventSelect.replaceChildren(new Option('Choose an event', ''));
-      events.forEach(event => eventSelect.add(new Option(eventTitle(event), event.id)));
+      events.forEach(event => eventSelect.add(new Option(eventTitle(event), event.id ?? event.event_id)));
       const requestedId = new URLSearchParams(window.location.search).get('event');
-      if (requestedId && events.some(event => String(event.id) === requestedId)) eventSelect.value = requestedId;
-      else if (events.length === 1) eventSelect.value = String(events[0].id);
+      if (requestedId && events.some(event => String(event.id ?? event.event_id) === requestedId)) eventSelect.value = requestedId;
+      else if (events.length === 1) eventSelect.value = String(events[0].id ?? events[0].event_id);
       if (eventSelect.value) await loadRoster();
     } catch (error) {
       eventSelect.replaceChildren(new Option('Unable to load events', ''));
@@ -136,7 +136,7 @@
       value(item, 'full_name'),
       value(item, 'email'),
       item.ticket_tier || 'standard',
-      item.created_at || item.registered_at || ''
+        item.created_at || item.createdAt || item.registered_at || ''
     ])];
     const blob = new Blob([data.map(row => row.map(quote).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
     const link = document.createElement('a');

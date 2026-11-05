@@ -52,7 +52,7 @@
   }
 
   function displayDate(event) {
-    const value = event.start_date || event.starts_at || event.start_time || event.event_date || event.date;
+    const value = event.start_date || event.starts_at || event.start_time || event.event_date || event.date || event.timestamp;
     if (!value) return 'Date to be announced';
     const date = new Date(value);
     return Number.isNaN(date.getTime()) ? String(value) : date.toLocaleString();
@@ -72,7 +72,7 @@
       document.getElementById('event-description').textContent = currentEvent.description || 'No description is available for this event.';
       document.getElementById('event-date').textContent = displayDate(currentEvent);
       document.getElementById('event-location').textContent = currentEvent.location || currentEvent.venue || '';
-      status.textContent = `Loaded from GET /api/events/${currentEvent.id}.`;
+      status.textContent = `Loaded from GET /api/events/${currentEvent.id || currentEvent.event_id}.`;
       document.title = `${label(currentEvent)} | Campus Connect`;
     } catch (error) {
       document.getElementById('event-title').textContent = 'Event unavailable';
@@ -90,7 +90,7 @@
     result.textContent = 'Submitting registration…';
     const email = EventHubApi.currentEmail();
     const payload = {
-      event_id: currentEvent.id,
+      event_id: currentEvent.id || currentEvent.event_id,
       ticket_tier: document.getElementById('ticket-tier').value,
       attendee: {
         full_name: document.getElementById('attendee-name').value.trim(),

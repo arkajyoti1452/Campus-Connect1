@@ -1,5 +1,5 @@
 (function () {
-  const API_BASE_URL = (window.EVENT_API_BASE_URL || 'https://zero5nov-workshop.onrender.com').replace(/\/+$/, '');
+  const API_BASE_URL = (window.EVENT_API_BASE_URL || '').replace(/\/+$/, '');
   const TOKEN_KEY = 'campusConnectAccessToken';
   const EMAIL_KEY = 'campusConnectEmail';
 

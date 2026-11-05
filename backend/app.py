@@ -34,8 +34,8 @@ FRONTEND_ASSETS = {
 
 EVENTS_TABLE = "events"
 REGISTRATIONS_TABLE = "registrations"
-EVENT_OWNER_COLUMN = os.environ.get("EVENT_OWNER_COLUMN", "organizer_id")
-REGISTRATION_USER_COLUMN = os.environ.get("REGISTRATION_USER_COLUMN", "user_id")
+EVENT_OWNER_COLUMN = os.environ.get("EVENT_OWNER_COLUMN", "organiser_id")
+REGISTRATION_USER_COLUMN = os.environ.get("REGISTRATION_USER_COLUMN", "student_id")
 CORS_ALLOWED_ORIGINS = [
     origin.strip()
     for origin in os.environ.get("CORS_ALLOWED_ORIGINS", "*").split(",")

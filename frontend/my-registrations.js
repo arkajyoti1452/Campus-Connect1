@@ -49,7 +49,7 @@
       tier.textContent = `Ticket tier: ${registration.ticket_tier || 'standard'}`;
       const registered = document.createElement('p');
       registered.className = 'mt-1 text-body-sm text-on-surface-variant';
-      registered.textContent = `Registered: ${formatDate(registration.created_at || registration.registered_at)}`;
+      registered.textContent = `Registered: ${formatDate(registration.created_at || registration.createdAt || registration.registered_at)}`;
       const link = document.createElement('a');
       link.className = 'mt-space-md inline-flex text-primary hover:underline';
       link.href = `/event-details?id=${encodeURIComponent(registration.event_id || '')}`;

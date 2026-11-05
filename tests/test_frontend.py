@@ -32,9 +32,10 @@ class FrontendTests(unittest.TestCase):
         for page, script in zip(PAGES, SCRIPTS[1:]):
             self.assertIn(f'/assets/{script}', page.read_text(encoding="utf-8"))
 
-    def test_api_client_uses_configured_render_url_and_all_contract_routes(self):
+    def test_api_client_uses_same_origin_and_all_contract_routes(self):
         source = (FRONTEND / "event-api.js").read_text(encoding="utf-8")
-        self.assertIn("https://zero5nov-workshop.onrender.com", source)
+        self.assertIn("window.EVENT_API_BASE_URL || ''", source)
+        self.assertNotIn("zero5nov-workshop.onrender.com", source)
         for route in (
             "/api/events",
             "/api/registrations",

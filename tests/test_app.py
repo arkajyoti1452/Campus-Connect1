@@ -59,7 +59,7 @@ class EventsApiTests(unittest.TestCase):
         self.event = {
             "id": "event-1",
             "title": "Workshop",
-            "organizer_id": "organizer-1",
+            "organiser_id": "organizer-1",
         }
 
     def test_home_serves_the_frontend(self):
@@ -155,12 +155,12 @@ class EventsApiTests(unittest.TestCase):
             )
         self.assertEqual(response.status_code, 201)
         inserted = fake.tables["registrations"][0]
-        self.assertEqual(inserted["user_id"], "user-123")
+        self.assertEqual(inserted["student_id"], "user-123")
         self.assertEqual(inserted["ticket_tier"], "vip_workshop")
-        self.assertNotEqual(inserted["user_id"], "attacker-controlled-id")
+        self.assertNotEqual(inserted["student_id"], "attacker-controlled-id")
 
     def test_duplicate_registration_returns_409(self):
-        existing = {"id": "registration-1", "event_id": "event-1", "user_id": "user-123"}
+        existing = {"id": "registration-1", "event_id": "event-1", "student_id": "user-123"}
         fake = FakeClient({"events": [self.event], "registrations": [existing]})
         with patch.object(app_module, "authenticated_client", return_value=(fake, "user-123", None)):
             response = self.client.post("/api/registrations", json={"event_id": "event-1"})
