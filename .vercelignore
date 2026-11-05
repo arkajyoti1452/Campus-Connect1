@@ -6,6 +6,6 @@ backend/.venv/
 **/__pycache__/
 **/*.py[cod]
 tests/
-frontend/screen.png
-frontend/DESIGN.md
+frontend/**/*.png
+frontend/**/*.md
 config/

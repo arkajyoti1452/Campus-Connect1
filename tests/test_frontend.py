@@ -1,4 +1,5 @@
 import re
+import json
 import shutil
 import subprocess
 import unittest
@@ -23,6 +24,12 @@ SCRIPTS = (
 
 
 class FrontendTests(unittest.TestCase):
+    def test_vercel_function_includes_frontend_with_a_glob_string(self):
+        config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
+        include_files = config["functions"]["app.py"]["includeFiles"]
+        self.assertIsInstance(include_files, str)
+        self.assertEqual(include_files, "frontend/**/*")
+
     def test_pages_load_shared_api_client_and_page_scripts(self):
         for page in PAGES:
             with self.subTest(page=page.name):
