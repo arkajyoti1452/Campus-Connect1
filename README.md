@@ -12,7 +12,7 @@ Campus Connect has four frontend pages served by Flask and a Supabase-backed eve
 4. In Supabase Auth URL configuration, set the Site URL to the deployed Vercel URL and allow any preview URLs you intend to use for sign-up confirmation.
 5. Run `backend/migrations/20261105_add_registration_details.sql` in the Supabase SQL Editor before accepting registrations.
 
-The root `app.py`, `requirements.txt`, `.python-version`, and `vercel.json` configure the Python function and include the HTML pages and frontend scripts in its bundle. If you set a separate API host, configure `CORS_ALLOWED_ORIGINS` with the frontend origin(s). Do not add a service-role or `sb_secret_...` key to Vercel. The application deliberately exposes only a publishable/anon key through `/api/config`.
+The root `pyproject.toml` points Vercel to the Flask app at `backend.app:app`; `vercel.json` includes the frontend pages and scripts in its bundle. If you set a separate API host, configure `CORS_ALLOWED_ORIGINS` with the frontend origin(s). Do not add a service-role or `sb_secret_...` key to Vercel. The application deliberately exposes only a publishable/anon key through `/api/config`.
 
 For details on Vercel's Flask runtime, see [Vercel's Flask guide](https://vercel.com/docs/frameworks/backend/flask) and [Python runtime configuration](https://vercel.com/docs/functions/runtimes/python).
 

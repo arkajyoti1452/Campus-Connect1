@@ -2,6 +2,7 @@ import re
 import json
 import shutil
 import subprocess
+import tomllib
 import unittest
 from pathlib import Path
 
@@ -26,9 +27,11 @@ SCRIPTS = (
 class FrontendTests(unittest.TestCase):
     def test_vercel_function_includes_frontend_with_a_glob_string(self):
         config = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
-        include_files = config["functions"]["app.py"]["includeFiles"]
+        include_files = config["functions"]["backend/app.py"]["includeFiles"]
         self.assertIsInstance(include_files, str)
         self.assertEqual(include_files, "frontend/**/*")
+        project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+        self.assertEqual(project["tool"]["vercel"]["entrypoint"], "backend.app:app")
 
     def test_pages_load_shared_api_client_and_page_scripts(self):
         for page in PAGES:
