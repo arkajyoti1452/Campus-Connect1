@@ -1,0 +1,12 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+backend/.env
+/config/secret_key
+
+# Python virtual environments and generated files
+**/venv/
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
